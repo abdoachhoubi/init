@@ -44,7 +44,56 @@ a {
 
 header {
   padding: 100px 0;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .header__heading {
+  font-size: 4rem;
+}
+header .header__heading span {
+  color: rgb(163, 140, 253);
+}
+header .search__container {
+  margin-top: 10rem;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+header .search__container .search__bar {
+  width: 40%;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 1.6rem;
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+header .search__container .search__bar:focus {
+  border-bottom: 4px solid rgb(163, 140, 253);
+}
+header .search__container .search__icon {
+  padding: 1rem;
+  margin-left: 4rem;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+  cursor: pointer;
+}
+header .search__container .search__icon * {
+  cursor: pointer;
+}
+header .search__container .search__icon:hover {
+  border-bottom: 4px solid rgb(163, 140, 253);
 }
 
 .nav__dsk {
