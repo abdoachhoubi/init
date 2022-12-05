@@ -43,7 +43,7 @@ a {
 }
 
 header {
-  padding: 100px 0;
+  padding: 100px 10%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,6 +52,17 @@ header {
 }
 header .header__heading {
   font-size: 4rem;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  header .header__heading {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .header__heading {
+    font-size: 1.4rem;
+  }
 }
 header .header__heading span {
   color: rgb(163, 140, 253);
@@ -67,6 +78,11 @@ header .search__container {
   justify-content: center;
   align-items: flex-end;
 }
+@media screen and (max-width: 1400px) {
+  header .search__container {
+    margin-top: 4rem;
+  }
+}
 header .search__container .search__bar {
   width: 40%;
   padding: 1rem;
@@ -81,6 +97,16 @@ header .search__container .search__bar {
 header .search__container .search__bar:focus {
   border-bottom: 4px solid rgb(163, 140, 253);
 }
+@media screen and (max-width: 1400px) {
+  header .search__container .search__bar {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  header .search__container .search__bar {
+    width: 70%;
+  }
+}
 header .search__container .search__icon {
   padding: 1rem;
   margin-left: 4rem;
@@ -88,6 +114,11 @@ header .search__container .search__icon {
   transition-duration: 300ms !important;
   transition-timing-function: ease-in-out !important;
   cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  header .search__container .search__icon {
+    margin-left: 2rem;
+  }
 }
 header .search__container .search__icon * {
   cursor: pointer;
