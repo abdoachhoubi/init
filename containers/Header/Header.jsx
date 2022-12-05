@@ -1,18 +1,27 @@
 import React, { useState, useContext } from "react";
+import { useRouter } from "next/router";
 import { Nav } from "../../components";
 import { HomeContext } from "../../pages";
 import { Search } from "react-feather";
 import acronym from "../../logic";
+import { Router } from "next/router";
 
-const Header = () => {
+const Header = ({ generate }) => {
   const [keyword, setKeyword] = useState(null);
-  const [result, setResult] = useState(null);
   const { width } = useContext(HomeContext);
+  const router = useRouter();
+
+  let size = 24;
+  if (width < 1600) size = 20;
+  else if (width < 1300) size = 18;
+  else if (width < 1100) size = 16;
 
   const search = () => {
+    let result;
     if (!keyword) return "Invalid";
     else {
-      setResult(acronym(keyword));
+      result = acronym(keyword);
+      console.log(acronym(keyword));
     }
     if (result) {
       const { complicated, extended, offensive } = result;
@@ -34,10 +43,15 @@ const Header = () => {
           className="search__bar"
           type="text"
           placeholder="Try WTF"
-          onChange={(e) => setKeyword(e.target.value)}
+          onChange={(e) => setKeyword(e.target.value.toUpperCase())}
         />
-        <div className="search__icon" onClick={() => console.log(search())}>
-          <Search size={22} color="#FFF" />
+        <div
+          className="search__icon"
+          onClick={() =>
+            router.push({ pathname: "/search", query: { q: keyword } })
+          }
+        >
+          <Search size={size} color="#FFF" />
         </div>
       </div>
     </header>
