@@ -5,6 +5,10 @@ import { Header, Main, Footer } from "../containers";
 export const HomeContext = createContext();
 
 export default function Home() {
+  const generate = (data, key) => {
+    console.log(key);
+    console.log(data);
+  };
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -23,7 +27,7 @@ export default function Home() {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Header generate={generate} />
         <Main />
         <Footer />
       </div>
