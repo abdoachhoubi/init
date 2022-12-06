@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import Head from "next/head";
-import { Header, Main, Footer } from "../containers";
+import { Header } from "../containers";
 
 export const HomeContext = createContext();
 
@@ -28,8 +28,6 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header generate={generate} />
-        <Main />
-        <Footer />
       </div>
     </HomeContext.Provider>
   );
