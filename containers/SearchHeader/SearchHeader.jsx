@@ -1,15 +1,12 @@
 import React, { useState, useContext } from "react";
 import { useRouter } from "next/router";
+import { SearchContext } from "../../pages/search";
 import { Nav, SearchBar } from "../../components";
-import { HomeContext } from "../../pages";
-import { Search } from "react-feather";
-import acronym, { placeholder } from "../../logic";
-import { Router } from "next/router";
 
-const Header = ({ generate }) => {
+const SearchHeader = () => {
   const [keyword, setKeyword] = useState(null);
   const [error, setError] = useState("");
-  const { width } = useContext(HomeContext);
+  const { width } = useContext(SearchContext);
   const router = useRouter();
 
   let size = 24;
@@ -34,10 +31,10 @@ const Header = ({ generate }) => {
   const getRes = ({ result, keyword }) => {
     switch (result) {
       case "Not Found":
-        setError("error__input v");
+        console.log("okeh");
         break;
       case "Invalid":
-        setError("error__input");
+        console.log("okeh");
         break;
       default:
         router.push({ pathname: "/search", query: { q: keyword } });
@@ -46,12 +43,8 @@ const Header = ({ generate }) => {
   };
 
   return (
-    <header className="main__header">
+    <header className="search__header">
       <Nav width={width} />
-      <h1 className="header__heading">
-        Welcome to <span>init</span>, where you can the meaning of any{" "}
-        <span>acronym</span>
-      </h1>
       <SearchBar
         getRes={getRes}
         search={search}
@@ -59,17 +52,10 @@ const Header = ({ generate }) => {
         setKeyword={setKeyword}
         error={error}
         setError={setError}
-        placeholder={placeholder}
       />
-      {error != "" && (
-        <p className="error__message">
-          {error === "error__input"
-            ? "Please Write Something"
-            : "Acronym not found"}
-        </p>
-      )}
+      <h1>SearchHeader</h1>
     </header>
   );
 };
 
-export default Header;
+export default SearchHeader;

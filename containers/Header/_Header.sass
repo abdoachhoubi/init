@@ -1,47 +1,19 @@
-header
+.main__header
     padding: 100px 10%
     min-height: 100vh
     @include flex(column, center, center)
     .header__heading
         font-size: 4rem
         text-align: center
+        margin-bottom: 10rem
         @media screen and ( max-width: 1400px )
             font-size: 2rem
+            margin-bottom: 4rem
         @media screen and ( max-width: 1100px )
             font-size: 1.4rem
         span
             color: $color__primary
-    .search__container
-        margin-top: 10rem
-        width: 100%
-        height: fit-content
-        @include flex(row, flex-end, center)
-        @media screen and ( max-width: 1400px )
-            margin-top: 4rem
-        .search__bar
-            width: 40%
-            padding: 1rem
-            background-color: transparent
-            border: none
-            outline: none
-            border-bottom: 1px solid $color__light
-            font-size: 1.6rem
-            @include transition(300ms, ease-in-out)
-            &:focus
-                border-bottom: 4px solid $color__primary
-            @media screen and ( max-width: 1400px )
-                font-size: 1rem
-            @media screen and ( max-width: 900px )
-                width: 70%
-        .search__icon
-            padding: 1rem
-            margin-left: 4rem
-            border-bottom: 1px solid $color__light
-            @include transition(300ms, ease-in-out)
-            cursor: pointer
-            @media screen and ( max-width: 900px )
-                margin-left: 2rem
-            *
-                cursor: pointer
-            &:hover
-                border-bottom: 4px solid $color__primary
+    .error__message
+        margin-top: 4rem
+        color: $color__error
+        font-size: 1.2rem
