@@ -26,18 +26,18 @@ const DesNav = ({ width }) => {
           </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/pool" style={{ color: `#fff` }}>
-            Pool
+          <Link href="/acronyms" style={{ color: `#fff` }}>
+            Acronyms List
           </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/cursus" style={{ color: `#fff` }}>
-            Cursus
-          </Link>
-        </li>
-        <li className="nav__list__item">
-          <Link href="/other" style={{ color: `#fff` }}>
-            Other
+          <Link
+            href="https://github.com/abdoachhoubi/init"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: `#fff` }}
+          >
+            Contribute
           </Link>
         </li>
       </ul>

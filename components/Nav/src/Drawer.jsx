@@ -30,19 +30,19 @@ const Drawer = ({ menu, setMenu }) => {
             Home
           </Link>
         </li>
-        <li className="nav__list__item" onClick={() => setMenu("out")}>
-          <Link style={{ color: "#FFFFFF" }} href="/pool">
-            Pool
+        <li className="nav__list__item">
+          <Link href="/acronyms" style={{ color: `#fff` }}>
+            Acronyms List
           </Link>
         </li>
-        <li className="nav__list__item" onClick={() => setMenu("out")}>
-          <Link style={{ color: "#FFFFFF" }} href="/cursus">
-            Cursus
-          </Link>
-        </li>
-        <li className="nav__list__item" onClick={() => setMenu("out")}>
-          <Link style={{ color: "#FFFFFF" }} href="/other">
-            Other
+        <li className="nav__list__item">
+          <Link
+            href="https://github.com/abdoachhoubi/init"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: `#fff` }}
+          >
+            Contribute
           </Link>
         </li>
       </ul>
