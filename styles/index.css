@@ -42,7 +42,11 @@ a {
   text-decoration: none;
 }
 
-header {
+.error__input {
+  border-bottom: 4px solid rgb(255, 74, 74) !important;
+}
+
+.main__header {
   padding: 100px 10%;
   min-height: 100vh;
   display: flex;
@@ -50,81 +54,37 @@ header {
   justify-content: center;
   align-items: center;
 }
-header .header__heading {
+.main__header .header__heading {
   font-size: 4rem;
   text-align: center;
+  margin-bottom: 10rem;
 }
 @media screen and (max-width: 1400px) {
-  header .header__heading {
+  .main__header .header__heading {
     font-size: 2rem;
+    margin-bottom: 4rem;
   }
 }
 @media screen and (max-width: 1100px) {
-  header .header__heading {
+  .main__header .header__heading {
     font-size: 1.4rem;
   }
 }
-header .header__heading span {
+.main__header .header__heading span {
   color: rgb(163, 140, 253);
 }
-header .search__container {
-  margin-top: 10rem;
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.main__header .error__message {
+  margin-top: 4rem;
+  color: rgb(255, 74, 74);
+  font-size: 1.2rem;
+}
+
+.search__header {
+  padding: 100px 10%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-}
-@media screen and (max-width: 1400px) {
-  header .search__container {
-    margin-top: 4rem;
-  }
-}
-header .search__container .search__bar {
-  width: 40%;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  font-size: 1.6rem;
-  transition-duration: 300ms !important;
-  transition-timing-function: ease-in-out !important;
-}
-header .search__container .search__bar:focus {
-  border-bottom: 4px solid rgb(163, 140, 253);
-}
-@media screen and (max-width: 1400px) {
-  header .search__container .search__bar {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 900px) {
-  header .search__container .search__bar {
-    width: 70%;
-  }
-}
-header .search__container .search__icon {
-  padding: 1rem;
-  margin-left: 4rem;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  transition-duration: 300ms !important;
-  transition-timing-function: ease-in-out !important;
-  cursor: pointer;
-}
-@media screen and (max-width: 900px) {
-  header .search__container .search__icon {
-    margin-left: 2rem;
-  }
-}
-header .search__container .search__icon * {
-  cursor: pointer;
-}
-header .search__container .search__icon:hover {
-  border-bottom: 4px solid rgb(163, 140, 253);
+  align-items: center;
 }
 
 .nav__dsk {
@@ -306,4 +266,58 @@ header .search__container .search__icon:hover {
 }
 .nav__mob .nav__drawer .nav__social a:not(:last-child) {
   margin-right: 1rem;
+}
+
+.search__container {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.search__container .search__bar {
+  width: 40%;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 1.6rem;
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+.search__container .search__bar:focus {
+  border-bottom: 4px solid rgb(163, 140, 253);
+}
+@media screen and (max-width: 1400px) {
+  .search__container .search__bar {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .search__container .search__bar {
+    width: 70%;
+  }
+}
+.search__container .search__icon {
+  padding: 1rem;
+  margin-left: 4rem;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .search__container .search__icon {
+    margin-left: 2rem;
+  }
+}
+.search__container .search__icon * {
+  cursor: pointer;
+}
+.search__container .search__icon:hover {
+  border-bottom: 4px solid rgb(163, 140, 253);
 }/*# sourceMappingURL=index.css.map */
