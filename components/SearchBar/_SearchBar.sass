@@ -1,0 +1,31 @@
+.search__container
+    width: 100%
+    height: fit-content
+    @include flex(row, flex-end, center)
+    .search__bar
+        width: 40%
+        padding: 1rem
+        background-color: transparent
+        border: none
+        outline: none
+        border-bottom: 1px solid $color__light
+        font-size: 1.6rem
+        @include transition(300ms, ease-in-out)
+        &:focus
+            border-bottom: 4px solid $color__primary
+        @media screen and ( max-width: 1400px )
+            font-size: 1rem
+        @media screen and ( max-width: 900px )
+            width: 70%
+    .search__icon
+        padding: 1rem
+        margin-left: 4rem
+        border-bottom: 1px solid $color__light
+        @include transition(300ms, ease-in-out)
+        cursor: pointer
+        @media screen and ( max-width: 900px )
+            margin-left: 2rem
+        *
+            cursor: pointer
+        &:hover
+            border-bottom: 4px solid $color__primary

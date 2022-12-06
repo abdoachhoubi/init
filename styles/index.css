@@ -1,0 +1,323 @@
+@import url(https://api.fontshare.com/v2/css?f[]=manrope@700,400,300,1,800,600,500,200&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(16, 16, 16);
+  overflow-x: hidden;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(163, 140, 253) rgb(16, 16, 16);
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+@media screen and (max-width: 900) {
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+body::-webkit-scrollbar-track {
+  background: rgb(16, 16, 16);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(163, 140, 253);
+}
+
+p, a, li, span, q, small, h1, h2, h3, h4, h5, h6, input, textarea, button {
+  font-family: "Manrope", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.error__input {
+  border-bottom: 4px solid rgb(255, 74, 74) !important;
+}
+
+.main__header {
+  padding: 100px 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__header .header__heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+@media screen and (max-width: 1400px) {
+  .main__header .header__heading {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main__header .header__heading {
+    font-size: 1.4rem;
+  }
+}
+.main__header .header__heading span {
+  color: rgb(163, 140, 253);
+}
+.main__header .error__message {
+  margin-top: 4rem;
+  color: rgb(255, 74, 74);
+  font-size: 1.2rem;
+}
+
+.search__header {
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__dsk {
+  width: 100%;
+  padding: 0 10%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  box-shadow: 2px 18px 99px -41px rgba(0, 0, 0, 0.68);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1000 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk {
+    height: 80px;
+  }
+}
+.nav__dsk .nav__title {
+  font-size: 2rem;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 1600px) {
+  .nav__dsk .nav__title {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk .nav__title {
+    font-size: 1.4rem;
+  }
+}
+.nav__dsk .nav__title span {
+  color: rgb(163, 140, 253);
+}
+.nav__dsk .nav__list {
+  width: 26%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  .nav__dsk .nav__list {
+    width: 36%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk .nav__list {
+    width: 32%;
+  }
+}
+.nav__dsk .nav__list li {
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1600px) {
+  .nav__dsk .nav__list li {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk .nav__list li {
+    font-size: 0.8rem;
+  }
+}
+.nav__dsk .nav__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk .nav__social {
+    width: 12%;
+  }
+}
+.nav__dsk .nav__social a {
+  display: block;
+}
+.nav__dsk .nav__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.nav__mob {
+  width: 100%;
+  height: 80px;
+  position: fixed !important;
+  top: 0 !important;
+  left: unset !important;
+  right: 0 !important;
+  bottom: unset !important;
+  z-index: 10 !important;
+}
+.nav__mob .navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__mob .navbar .nav__title {
+  font-size: 1.4rem;
+}
+.nav__mob .navbar .nav__title span {
+  color: rgb(163, 140, 253);
+}
+.nav__mob .nav__drawer {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(16, 16, 16);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 100 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__mob .nav__drawer .menu__close {
+  position: absolute !important;
+  top: 27px !important;
+  left: unset !important;
+  right: 1rem !important;
+  bottom: unset !important;
+  z-index: 100 !important;
+}
+.nav__mob .nav__drawer .nav__list {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 10vh !important;
+  z-index: 1 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav__mob .nav__drawer .nav__list .nav__list__item a {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.4rem;
+}
+.nav__mob .nav__drawer .nav__list .nav__list__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.nav__mob .nav__drawer .nav__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute !important;
+  top: unset !important;
+  left: unset !important;
+  right: unset !important;
+  bottom: 10vh !important;
+  z-index: 1 !important;
+}
+.nav__mob .nav__drawer .nav__social a {
+  display: block;
+}
+.nav__mob .nav__drawer .nav__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.search__container {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.search__container .search__bar {
+  width: 40%;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 1.6rem;
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+.search__container .search__bar:focus {
+  border-bottom: 4px solid rgb(163, 140, 253);
+}
+@media screen and (max-width: 1400px) {
+  .search__container .search__bar {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .search__container .search__bar {
+    width: 70%;
+  }
+}
+.search__container .search__icon {
+  padding: 1rem;
+  margin-left: 4rem;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .search__container .search__icon {
+    margin-left: 2rem;
+  }
+}
+.search__container .search__icon * {
+  cursor: pointer;
+}
+.search__container .search__icon:hover {
+  border-bottom: 4px solid rgb(163, 140, 253);
+}/*# sourceMappingURL=index.css.map */
