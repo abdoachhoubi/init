@@ -85,6 +85,7 @@ a {
   margin-top: 4rem;
   color: rgb(255, 74, 74);
   font-size: 1.2rem;
+  transition-duration: 400ms;
 }
 
 .search__header {
