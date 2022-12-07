@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import { Nav, SearchBar } from "../../components";
 import { HomeContext } from "../../pages";
@@ -8,9 +8,20 @@ import { Router } from "next/router";
 
 const Header = ({ generate }) => {
   const [keyword, setKeyword] = useState(null);
+  const [errmsg, setErrmsg] = useState("opac");
   const [error, setError] = useState("");
+  const [note, setNote] = useState("");
   const { width } = useContext(HomeContext);
   const router = useRouter();
+
+  useEffect(() => {
+    if (error === "error__input")
+      setNote("It seems that you haven't entered anything -_-");
+    else if (error === "error__input v")
+      setNote("Couldn't find acronym, try something else ^_^");
+    if (error != "") setErrmsg("nonopac");
+    else setErrmsg("opac");
+  }, [error]);
 
   let size = 24;
   if (width < 1600) size = 20;
@@ -61,13 +72,7 @@ const Header = ({ generate }) => {
         setError={setError}
         placeholder={placeholder}
       />
-      {error != "" && (
-        <p className="error__message">
-          {error === "error__input"
-            ? "Please Write Something"
-            : "Acronym not found"}
-        </p>
-      )}
+      <p className={`error__message ${errmsg}`}>{note}</p>
     </header>
   );
 };
