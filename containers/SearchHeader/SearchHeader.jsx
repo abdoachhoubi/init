@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useRouter } from "next/router";
 import { SearchContext } from "../../pages/search";
 import { Nav, SearchBar } from "../../components";
+import acronym from "../../logic";
 
 const SearchHeader = () => {
   const [keyword, setKeyword] = useState(null);
