@@ -1,15 +1,8 @@
 import React from "react";
 import { Search } from "react-feather";
+import { placeholder } from "../../logic";
 
-const SearchBar = ({
-  getRes,
-  search,
-  size,
-  setKeyword,
-  error,
-  setError,
-  placeholder,
-}) => {
+const SearchBar = ({ getRes, search, size, setKeyword, error, setError }) => {
   let p = placeholder();
   return (
     <div className="search__container">
