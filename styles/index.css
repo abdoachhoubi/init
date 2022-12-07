@@ -46,6 +46,14 @@ a {
   border-bottom: 4px solid rgb(255, 74, 74) !important;
 }
 
+.opac {
+  opacity: 0;
+}
+
+.nonopac {
+  opacity: 1;
+}
+
 .main__header {
   padding: 100px 10%;
   min-height: 100vh;
@@ -77,6 +85,7 @@ a {
   margin-top: 4rem;
   color: rgb(255, 74, 74);
   font-size: 1.2rem;
+  transition-duration: 400ms;
 }
 
 .search__header {
