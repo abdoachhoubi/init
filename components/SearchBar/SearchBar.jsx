@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search } from "react-feather";
 import { placeholder } from "../../logic";
 
-const SearchBar = ({ getRes, search, size, setKeyword, error, setError }) => {
+const SearchBar = ({
+  getRes,
+  search,
+  size,
+  setKeyword,
+  error,
+  setError,
+  val,
+}) => {
   /* ------------------- Getting input placeholder -------------------- */
 
   let p = placeholder();
@@ -12,6 +20,9 @@ const SearchBar = ({ getRes, search, size, setKeyword, error, setError }) => {
   /* ----------------------- Input value state ------------------------ */
 
   const [value, setValue] = useState("");
+  useEffect(() => {
+    if (val) setValue(val);
+  }, []);
 
   /* -------------------------------------------------------------------- */
 

@@ -3,7 +3,7 @@ import { SearchContext } from "../../pages/search";
 import { Nav, SearchBar } from "../../components";
 import acronym from "../../logic";
 
-const SearchHeader = () => {
+const SearchHeader = ({ q, res, setRes }) => {
   /* ----------------------- SearchHeader States ------------------------ */
 
   const [keyword, setKeyword] = useState(null);
@@ -65,6 +65,7 @@ const SearchHeader = () => {
         setError("error__input");
         break;
       default:
+        setRes(result, keyword);
         console.log(result, keyword);
         break;
     }
@@ -77,11 +78,13 @@ const SearchHeader = () => {
       <Nav width={width} />
       <SearchBar
         getRes={getRes}
+        setRes={setRes}
         search={search}
         size={size}
         setKeyword={setKeyword}
         error={error}
         setError={setError}
+        val={q}
       />
       <p className={`error__message ${errmsg}`}>{note}</p>
     </header>

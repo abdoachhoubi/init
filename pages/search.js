@@ -6,9 +6,12 @@ import { SearchHeader, Main, Footer } from "../containers";
 export const SearchContext = createContext();
 
 const Search = () => {
+  const [res, setRes] = useState(null);
+
   /* --------------------- Getting request query ---------------------- */
 
   const { query } = useRouter();
+  console.log(query);
 
   /* -------------------------------------------------------------------- */
 
@@ -35,7 +38,8 @@ const Search = () => {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <SearchHeader />
+          <SearchHeader q={query.q} setRes={setRes} />
+          <Main />
         </div>
       </SearchContext.Provider>
     )
