@@ -5,16 +5,16 @@ import { Header } from "../containers";
 export const HomeContext = createContext();
 
 export default function Home() {
-  const generate = (data, key) => {
-    // console.log(key);
-    // console.log(data);
-  };
+  /* ----------------------- Getting window width ----------------------- */
+
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
+
+  /* -------------------------------------------------------------------- */
 
   return (
     <HomeContext.Provider value={{ width: width }}>
@@ -27,7 +27,7 @@ export default function Home() {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header generate={generate} />
+        <Header />
       </div>
     </HomeContext.Provider>
   );

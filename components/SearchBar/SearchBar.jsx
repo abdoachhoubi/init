@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Search } from "react-feather";
 import { placeholder } from "../../logic";
 
 const SearchBar = ({ getRes, search, size, setKeyword, error, setError }) => {
+  /* ------------------- Getting input placeholder -------------------- */
+
   let p = placeholder();
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------------- Input value state ------------------------ */
+
+  const [value, setValue] = useState("");
+
+  /* -------------------------------------------------------------------- */
 
   return (
     <div className="search__container">
@@ -12,7 +22,15 @@ const SearchBar = ({ getRes, search, size, setKeyword, error, setError }) => {
         type="text"
         placeholder={p}
         onFocus={() => setError("")}
-        onChange={(e) => setKeyword(e.target.value.toUpperCase())}
+        onKeyDown={(e) => {
+          e.key == "Enter" && getRes(search());
+        }}
+        value={value}
+        onChange={(e) => {
+          e.preventDefault();
+          setValue(e.target.value);
+          setKeyword(e.target.value.toUpperCase());
+        }}
       />
       <div className={`search__icon ${error}`} onClick={() => getRes(search())}>
         <Search size={size} color="#FFF" />

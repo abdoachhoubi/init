@@ -1,19 +1,42 @@
-import React, { useState, useContext } from "react";
-import { useRouter } from "next/router";
+import React, { useState, useEffect, useContext } from "react";
 import { SearchContext } from "../../pages/search";
 import { Nav, SearchBar } from "../../components";
 import acronym from "../../logic";
 
 const SearchHeader = () => {
-  const [keyword, setKeyword] = useState(null);
-  const [error, setError] = useState("");
-  const { width } = useContext(SearchContext);
-  const router = useRouter();
+  /* ----------------------- SearchHeader States ------------------------ */
 
+  const [keyword, setKeyword] = useState(null);
+  const [errmsg, setErrmsg] = useState("opac");
+  const [error, setError] = useState("");
+  const [note, setNote] = useState("");
+
+  /* -------------------------------------------------------------------- */
+
+  /* ---------------------------- Icon Width ---------------------------- */
+
+  const { width } = useContext(SearchContext);
   let size = 24;
   if (width < 1600) size = 20;
   else if (width < 1300) size = 18;
   else if (width < 1100) size = 16;
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------------- Handling input error ----------------------- */
+
+  useEffect(() => {
+    if (error === "error__input")
+      setNote("It seems that you haven't entered anything -_-");
+    else if (error === "error__input v")
+      setNote("Couldn't find acronym, try something else ^_^");
+    if (error != "") setErrmsg("nonopac");
+    else setErrmsg("opac");
+  }, [error]);
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------- Search for a specific acronym ------------------ */
 
   const search = () => {
     let result;
@@ -29,19 +52,25 @@ const SearchHeader = () => {
     return { result: "Not Found", keyword };
   };
 
+  /* -------------------------------------------------------------------- */
+
+  /* -------------------- Resolves the search result -------------------- */
+
   const getRes = ({ result, keyword }) => {
     switch (result) {
       case "Not Found":
-        console.log("okeh");
+        setError("error__input v");
         break;
       case "Invalid":
-        console.log("okeh");
+        setError("error__input");
         break;
       default:
-        router.push({ pathname: "/search", query: { q: keyword } });
+        console.log(result, keyword);
         break;
     }
   };
+
+  /* -------------------------------------------------------------------- */
 
   return (
     <header className="search__header">
@@ -54,7 +83,7 @@ const SearchHeader = () => {
         error={error}
         setError={setError}
       />
-      <h1>SearchHeader</h1>
+      <p className={`error__message ${errmsg}`}>{note}</p>
     </header>
   );
 };

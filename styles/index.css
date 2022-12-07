@@ -46,6 +46,13 @@ a {
   border-bottom: 4px solid rgb(255, 74, 74) !important;
 }
 
+.error__message {
+  margin-top: 4rem;
+  color: rgb(255, 74, 74);
+  font-size: 1.2rem;
+  transition-duration: 400ms;
+}
+
 .opac {
   opacity: 0;
 }
@@ -80,12 +87,6 @@ a {
 }
 .main__header .header__heading span {
   color: rgb(163, 140, 253);
-}
-.main__header .error__message {
-  margin-top: 4rem;
-  color: rgb(255, 74, 74);
-  font-size: 1.2rem;
-  transition-duration: 400ms;
 }
 
 .search__header {
