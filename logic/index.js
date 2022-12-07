@@ -15,10 +15,8 @@ const acronym = (keyword) => {
 export const placeholder = () => {
   let keys = [];
   for (let i = 0; i < 20; i++) {
-    console.log(src.extended[i + Math.random(22, 67)]);
     keys.push(`Try "${src.extended[i + Math.random(22, 67)]}"`);
   }
-  console.log(keys);
   return keys[Math.random(0, 20)];
 };
 
