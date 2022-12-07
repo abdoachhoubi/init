@@ -18,16 +18,9 @@ const ft_rand_range = (min, max) => {
 export const placeholder = () => {
   let keys = [];
   for (let i = 0; i < 20; i++) {
-<<<<<<< HEAD
-    console.log(src.extended[i + ft_rand_range(22, 67)]);
     keys.push(`Try "${src.extended[i + ft_rand_range(22, 67)].key}"`);
   }
   return keys[ft_rand_range(0, 20)];
-=======
-    keys.push(`Try "${src.extended[i + Math.random(22, 67)]}"`);
-  }
-  return keys[Math.random(0, 20)];
->>>>>>> 819c7acfc32c53c95906c856381b3d73c4a649f6
 };
 
 export default acronym;
