@@ -3,16 +3,35 @@ import { useRouter } from "next/router";
 import { Nav, SearchBar } from "../../components";
 import { HomeContext } from "../../pages";
 import { Search } from "react-feather";
-import acronym, { placeholder } from "../../logic";
-import { Router } from "next/router";
+import acronym from "../../logic";
 
-const Header = ({ generate }) => {
+const Header = () => {
+  /* -------------------------- Header states --------------------------- */
+
   const [keyword, setKeyword] = useState(null);
   const [errmsg, setErrmsg] = useState("opac");
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------------------- Icon Size ---------------------------- */
+
   const { width } = useContext(HomeContext);
+  let size = 24;
+  if (width < 1600) size = 20;
+  else if (width < 1300) size = 18;
+  else if (width < 1100) size = 16;
+
+  /* -------------------------------------------------------------------- */
+
+  /* ------------------------ Router controller ------------------------- */
+
   const router = useRouter();
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------------- Input error handling ----------------------- */
 
   useEffect(() => {
     if (error === "error__input")
@@ -23,10 +42,9 @@ const Header = ({ generate }) => {
     else setErrmsg("opac");
   }, [error]);
 
-  let size = 24;
-  if (width < 1600) size = 20;
-  else if (width < 1300) size = 18;
-  else if (width < 1100) size = 16;
+  /* -------------------------------------------------------------------- */
+
+  /* ------------------ Search for a specific acronym ------------------- */
 
   const search = () => {
     let result;
@@ -42,6 +60,10 @@ const Header = ({ generate }) => {
     return { result: "Not Found", keyword };
   };
 
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------- Resolves the result of a search ------------------ */
+
   const getRes = ({ result, keyword }) => {
     switch (result) {
       case "Not Found":
@@ -55,6 +77,8 @@ const Header = ({ generate }) => {
         break;
     }
   };
+
+  /* -------------------------------------------------------------------- */
 
   return (
     <header className="main__header">
@@ -70,7 +94,6 @@ const Header = ({ generate }) => {
         setKeyword={setKeyword}
         error={error}
         setError={setError}
-        placeholder={placeholder}
       />
       <p className={`error__message ${errmsg}`}>{note}</p>
     </header>

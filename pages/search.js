@@ -6,7 +6,13 @@ import { SearchHeader, Main, Footer } from "../containers";
 export const SearchContext = createContext();
 
 const Search = () => {
+  /* --------------------- Getting request query ---------------------- */
+
   const { query } = useRouter();
+
+  /* -------------------------------------------------------------------- */
+
+  /* ----------------------- Getting window width ----------------------- */
 
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
@@ -14,6 +20,8 @@ const Search = () => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
+
+  /* -------------------------------------------------------------------- */
 
   return (
     query?.q && (
@@ -35,3 +43,4 @@ const Search = () => {
 };
 
 export default Search;
+``;
