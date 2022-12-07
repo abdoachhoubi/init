@@ -7,7 +7,6 @@ export const SearchContext = createContext();
 
 const Search = () => {
   const { query } = useRouter();
-  console.log(query);
 
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
