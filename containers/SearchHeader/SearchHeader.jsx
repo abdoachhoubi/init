@@ -3,7 +3,7 @@ import { SearchContext } from "../../pages/search";
 import { Nav, SearchBar } from "../../components";
 import acronym from "../../logic";
 
-const SearchHeader = ({ q, res, setRes }) => {
+const SearchHeader = ({ q, setRes }) => {
   /* ----------------------- SearchHeader States ------------------------ */
 
   const [keyword, setKeyword] = useState(null);
@@ -66,7 +66,6 @@ const SearchHeader = ({ q, res, setRes }) => {
         break;
       default:
         setRes(result, keyword);
-        console.log(result, keyword);
         break;
     }
   };

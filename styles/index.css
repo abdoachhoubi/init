@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(163, 140, 253);
 }
 
-p, a, li, span, q, small, h1, h2, h3, h4, h5, h6, input, textarea, button {
+p, a, li, span, q, small, h1, h2, h3, h4, h5, h6, input, textarea, button, tr {
   font-family: "Manrope", sans-serif;
   color: rgb(255, 255, 255);
 }
@@ -59,6 +59,86 @@ a {
 
 .nonopac {
   opacity: 1;
+}
+
+.ac__main {
+  width: 100vw;
+  padding: 120px 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .ac__main {
+    padding: 100px 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.ac__main .res__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .ac__main .res__section {
+    width: 100%;
+  }
+}
+.ac__main .sec__heading {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: rgb(163, 140, 253);
+}
+.ac__main .res__list {
+  border-color: rgb(163, 140, 253);
+  border-spacing: 0;
+}
+@media screen and (max-width: 900px) {
+  .ac__main .res__list {
+    width: 100%;
+  }
+}
+.ac__main .res__list th, .ac__main .res__list td {
+  min-width: 10vw;
+  max-width: 18vw;
+  padding: 1rem;
+  margin: 0;
+  border: 1px solid rgb(163, 140, 253);
+  text-align: left;
+  overflow: scroll;
+}
+.ac__main .res__list th::-webkit-scrollbar, .ac__main .res__list td::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .ac__main .res__list th, .ac__main .res__list td {
+    width: 100vw;
+  }
+}
+.ac__main .res__list th {
+  font-size: 1.4rem;
+}
+.ac__main .res__list td {
+  font-size: 1.1rem;
+}
+.ac__main .res__list:not(last-child) {
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1400px) {
+  .ac__main .res__list:not(last-child) {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .ac__main .res__list:not(last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .main__header {
@@ -95,6 +175,92 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.search__main {
+  width: 100vw;
+  min-height: calc(80vh - 100px);
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .search__main {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.search__main .res__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .search__main .res__section {
+    width: 100%;
+  }
+}
+.search__main .sec__heading {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: rgb(163, 140, 253);
+}
+.search__main .res__list {
+  border-color: rgb(163, 140, 253);
+  border-spacing: 0;
+}
+@media screen and (max-width: 900px) {
+  .search__main .res__list {
+    width: 100%;
+  }
+}
+.search__main .res__list th, .search__main .res__list td {
+  min-width: 10vw;
+  padding: 1rem;
+  margin: 0;
+  border: 1px solid rgb(163, 140, 253);
+  text-align: left;
+}
+.search__main .res__list th {
+  font-size: 1.4rem;
+}
+.search__main .res__list td {
+  font-size: 1.1rem;
+}
+.search__main .res__list:not(last-child) {
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1400px) {
+  .search__main .res__list:not(last-child) {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .search__main .res__list:not(last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+footer {
+  padding: 30px 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+footer a {
+  color: rgb(163, 140, 253);
 }
 
 .nav__dsk {

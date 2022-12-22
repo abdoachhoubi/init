@@ -73,7 +73,7 @@ const Header = () => {
         setError("error__input");
         break;
       default:
-        console.log(result);
+        result;
         router.push({
           pathname: "/search",
           query: { q: keyword, res: result },
@@ -88,8 +88,8 @@ const Header = () => {
     <header className="main__header">
       <Nav width={width} />
       <h1 className="header__heading">
-        Welcome to <span>init</span>, where you can the meaning of any{" "}
-        <span>acronym</span>
+        Welcome to <span>init</span>, where you can find the meaning of any{" "}
+        <span>acronym.</span>
       </h1>
       <SearchBar
         getRes={getRes}

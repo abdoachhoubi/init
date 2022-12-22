@@ -39,6 +39,7 @@ const SearchBar = ({
         value={value}
         onChange={(e) => {
           e.preventDefault();
+          setError("");
           setValue(e.target.value);
           setKeyword(e.target.value.toUpperCase());
         }}

@@ -11,7 +11,6 @@ const Search = () => {
   /* --------------------- Getting request query ---------------------- */
 
   const { query } = useRouter();
-  console.log(query);
 
   /* -------------------------------------------------------------------- */
 
@@ -38,9 +37,10 @@ const Search = () => {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <SearchHeader q={query.q} setRes={setRes} />
-          <Main />
+          <SearchHeader q={query.q} setRes={setRes} res={res} />
+          <Main q={query.q} response={res} />
         </div>
+        <Footer />
       </SearchContext.Provider>
     )
   );
