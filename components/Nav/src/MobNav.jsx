@@ -15,7 +15,7 @@ const MobNav = () => {
       <div className="navbar">
         <Link href="/">
           <h1 className="nav__title">
-            <span>* </span>Leet Source
+            <span>_ </span>init
           </h1>
         </Link>
         <div className="menu__open" onClick={() => setMenu("in")}>
