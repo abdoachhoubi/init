@@ -73,7 +73,7 @@ const Header = () => {
         setError("error__input");
         break;
       default:
-        console.log(result);
+        result;
         router.push({
           pathname: "/search",
           query: { q: keyword, res: result },

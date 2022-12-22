@@ -15,7 +15,6 @@ const Main = ({ q, response }) => {
   useEffect(() => {
     setRes(acronym(q));
   }, [q]);
-  console.log(res);
   useEffect(() => {
     if (response) {
       setRes(response);
