@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import Head from "next/head";
-import { Header } from "../containers";
+import { Header, Footer } from "../containers";
 
 export const HomeContext = createContext();
 
@@ -29,6 +29,7 @@ export default function Home() {
         </Head>
         <Header />
       </div>
+      <Footer />
     </HomeContext.Provider>
   );
 }

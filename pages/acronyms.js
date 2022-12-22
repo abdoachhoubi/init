@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Nav } from "../components";
 import src from "../res";
+import { Footer } from "../containers";
 
 const TableRow = ({ k, value }) => {
   return (
@@ -101,6 +102,7 @@ const acronyms = () => {
           </section>
         )}
       </main>
+      <Footer />
     </div>
   );
 };

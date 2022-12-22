@@ -40,6 +40,7 @@ const Search = () => {
           <SearchHeader q={query.q} setRes={setRes} res={res} />
           <Main q={query.q} response={res} />
         </div>
+        <Footer />
       </SearchContext.Provider>
     )
   );

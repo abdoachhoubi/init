@@ -179,6 +179,7 @@ a {
 
 .search__main {
   width: 100vw;
+  min-height: calc(80vh - 100px);
   padding: 0 10vw;
   display: flex;
   flex-direction: row;
@@ -245,6 +246,21 @@ a {
     margin-right: 0;
     margin-bottom: 2rem;
   }
+}
+
+footer {
+  padding: 30px 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+footer a {
+  color: rgb(163, 140, 253);
 }
 
 .nav__dsk {
