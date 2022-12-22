@@ -35,6 +35,33 @@ const Search = () => {
               name="description"
               content="Acronym finder, it finds meanings of all acronyms including WTF? -> Where's The Food?"
             />
+            <meta property="og:url" content="https://openinit.vercel.app" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="init - acronym finder" />
+            <meta
+              property="og:description"
+              content="Acronym finder, it finds meanings of all acronyms!"
+            />
+            <meta
+              property="og:image"
+              content="https://openinit.vercel.app/init-acronym-finder.png"
+            />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta property="twitter:domain" content="openinit.vercel.app" />
+            <meta
+              property="twitter:url"
+              content="https://openinit.vercel.app"
+            />
+            <meta name="twitter:title" content="init - acronym finder" />
+            <meta
+              name="twitter:description"
+              content="Acronym finder, it finds meanings of all acronyms!"
+            />
+            <meta
+              name="twitter:image"
+              content="https://openinit.vercel.app/init-acronym-finder.png"
+            />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <SearchHeader q={query.q} setRes={setRes} res={res} />
