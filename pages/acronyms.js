@@ -13,7 +13,7 @@ const TableRow = ({ k, value }) => {
   );
 };
 
-const acronyms = () => {
+const Acronyms = () => {
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -107,4 +107,4 @@ const acronyms = () => {
   );
 };
 
-export default acronyms;
+export default Acronyms;
