@@ -32,3 +32,4 @@ const extended = [{ key: "WTF", value: "where's the food" }];
 ## Contributors:
 
 - [Astroboy **author**](https://astrofolio.vercel.app)
+- [Vishwajeetmallan](https://github.com/Vishwajeetmallan)
