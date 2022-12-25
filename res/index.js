@@ -592,6 +592,9 @@ const offensive = [
   { key: `JFGI`, value: `just fucking Google it` },
   { key: `JFW`, value: `just fucking works` },
   { key: `LMFAO`, value: `laughing my fucking ass off` },
+  { key: `LGBT`, value: `Aliens` },
+  { key: `LGBTQ`, value: `VIP Aliens` },
+  { key: `LGBTQ+`, value: `Aliens Pro Max` },
   { key: `NFC`, value: `no fucking clue` },
   { key: `NFI`, value: `no fucking idea` },
   { key: `NFW`, value: `no fucking way` },
@@ -621,6 +624,10 @@ const offensive = [
   { key: `WTFRUD`, value: `what the fuck are you doing` },
   { key: `YMA`, value: `yo momma's ass` },
   { key: `YTF`, value: `why the fuck` },
+  { key: `GAY`, value: `No one but You -_-` },
+  { key: `MTF`, value: `Mother Fucker` },
+  { key: `UWU`, value: `Fuck Off Bitch!` },
+  { key: `YK`, value: `Yamete Kudasai` },
 ];
 
 const complicated = [
