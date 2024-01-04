@@ -559,6 +559,8 @@ const extended = [
 
 const offensive = [
   { key: `AFU`, value: `all fucked up` },
+  { key: `REDA`, value: `Blind Gay` },
+  { key: `KARAFI`, value: `Blind Gay's BF` },
   { key: `B/S`, value: `bullshit` },
   { key: `BAMF`, value: `bad-ass motherfucker` },
   { key: `BFD`, value: `big fucking deal` },
@@ -633,9 +635,9 @@ const offensive = [
 const complicated = [
   { key: `3WHS`, value: `three-way handshake` },
   { key: `8VSB`, value: `8-state vestigial side band modulation` },
-  { key: `A1C`, value: `airman first class`},
-  { key: `A2ATD`, value: `anti-armour advanced technology demonstration`},
-  { key: `A2C2`, value: `army airspace command and control`},
+  { key: `A1C`, value: `airman first class` },
+  { key: `A2ATD`, value: `anti-armour advanced technology demonstration` },
+  { key: `A2C2`, value: `army airspace command and control` },
   { key: `AA`, value: `anti-aliasing` },
   { key: `AAA`, value: `authentication, authorization, [and] accounting` },
   { key: `AAT`, value: `average access time` },
@@ -707,7 +709,10 @@ const complicated = [
   { key: `ASIC`, value: `application-specific integrated circuit` },
   { key: `ASIC`, value: `australian securities and investments commission` },
   { key: `ASIC`, value: `aviation security identification card` },
-  { key: `ASICS`, value: `anima sana in corpore sano (Latin, "A sound mind in a sound body")` },
+  {
+    key: `ASICS`,
+    value: `anima sana in corpore sano (Latin, "A sound mind in a sound body")`,
+  },
   { key: `ASK`, value: `amplitude shif keying` },
   { key: `ASLR`, value: `address space layout randomization` },
   { key: `ASN`, value: `autonomous system number` },
